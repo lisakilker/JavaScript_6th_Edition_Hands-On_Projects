@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 3
+      Hands-on Project 3-4
+
+      Author: Lisa Kilker
+      Date:   April 12, 2018
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 3-4</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 3-4
+      </h1>
+   </header>
+
+   <article>
+      <div id="results">
+          <ul>
+             <li id="item1"></li>
+             <li id="item2"></li>
+             <li id="item3"></li>
+             <li id="item4"></li>
+             <li id="item5"></li>
+          </ul>
+          <p id="resultsExpl"></p>
+      </div>
+      <form>
+          <fieldset>
+            <label for="toolBox" id="placeLabel">
+              Type the name of a tool, then click Submit:
+            </label>
+            <input type="text" id="toolBox" />
+          </fieldset>
+          <fieldset>
+            <button type="button" id="button">Submit</button>
+          </fieldset>
+      </form>
+   </article>
+   <script>
+      var i = 1;
+      var listItem = "";
+    
+      function processInput() {
+        if (i <= 5) {
+            listItem = "item" + i;
+                document.getElementById(listItem).innerHTML = document.getElementById("toolBox").value;
+                document.getElementById("toolBox").value = "";
+
+        if (i == 5) {
+                document.getElementById("resultsExpl").innerHTML = "Thank you for your suggestions.";
+          }
+            i++;
+        }
+      }
+      var submitButton = document.getElementById("button");
+
+        if(submitButton.addEventListener) {
+            submitButton.addEventListener("click", processInput, false);
+
+      } else if(submitButton.attachEvent) {
+            submitButton.attachEvent("onclick", processInput);
+    }
+    </script>
+  </body>
+</html>

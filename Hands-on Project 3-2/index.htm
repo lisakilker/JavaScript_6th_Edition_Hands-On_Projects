@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 3
+      Hands-on Project 3-2
+
+      Author: Lisa Kilker
+      Date:   April 12, 2018
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 3-2</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.58072.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 3-2
+      </h1>
+   </header>
+
+   <article>
+      <h2>Contact Information</h2>
+      <form>
+        <fieldset id="contactinfo">
+          <label for="nameinput">
+            Name
+            <input type="text" id="nameinput" name="name" placeholder="first and last name" />
+          </label>
+          <label for="emailinput">
+            Email
+            <input type="text" id="emailinput" name="email" placeholder="address@example.com" />
+          </label>
+          <label for="phoneinput">
+            Phone
+            <input type="text" id="phoneinput" name="phone" placeholder="###-###-####" />
+          </label>
+        </fieldset>
+        <fieldset id="submitbutton">
+          <input type="submit" value="Submit" />
+        </fieldset>
+     </form>
+   </article>
+   <script>
+     function insertPlaceholders() {
+        if(!Modernizr.input.placeholder) {
+          document.getElementById("nameinput").value = "first and last name";
+          document.getElementById("emailinput").value = "address@example.com";
+          document.getElementById("phoneinput").value = "###-###-####";
+        }
+      }
+        if(window.addEventListener) {
+          window.addEventListener("load", insertPlaceholders, false);
+      } else if (window.attachEvent) {
+          window.attachEvent("onload", insertPlaceholders);
+      }
+    </script>
+  </body>
+</html>

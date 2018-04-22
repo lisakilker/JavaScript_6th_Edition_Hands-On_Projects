@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 4
+      Hands-on Project 4-3
+
+      Author: 
+      Date:   
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Hands-on Project 4-3</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 4-3
+      </h1>
+   </header>
+
+   <article>
+      <div id="results">
+          <p id="resultsExpl"></p>
+          <ul>
+             <li id="item1"></li>
+             <li id="item2"></li>
+             <li id="item3"></li>
+             <li id="item4"></li>
+             <li id="item5"></li>
+          </ul>
+      </div>
+      <form>
+          <fieldset>
+            <label for="placeBox" id="placeLabel">
+              Type the name of a place, then click Submit:
+            </label>
+            <input type="text" id="placeBox" />
+          </fieldset>
+          <fieldset>
+            <button type="button" id="button">Submit</button>
+          </fieldset>
+      </form>
+   </article>
+   <script>
+      var places = []; 
+      var i = 1; 
+  
+      function processInput() {
+         places[i] =  document.getElementById("placeBox").value; 
+                      document.getElementById("placeBox").value = "";
+  
+          if (places[i] != "") { 
+          if (i < 5) {
+          i++;
+
+         } else { 
+            document.getElementById("resultsExpl").innerHTML = "You entered the following places:";
+            listItem = "";
+
+            for (j = 1; j < 6; j++) { 
+              listItem = "item" + j;
+              document.getElementById(listItem).innerHTML = places[j];
+            }
+          }
+        } 
+      }
+      var submitButton = document.getElementById("button");
+      
+      if (submitButton.addEventListener) {
+          submitButton.addEventListener("click", processInput, false); 
+
+      } else if (submitButton.attachEvent) {
+          submitButton.attachEvent("onclick", processInput);
+    }
+    </script>
+  </body>
+</html>
