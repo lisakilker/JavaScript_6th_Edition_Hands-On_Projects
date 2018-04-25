@@ -1,0 +1,125 @@
+/*  JavaScript 6th Edition
+    Chapter 5
+    Hands-on Project 5-2
+
+    Filename: styles.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   max-width: 960px;
+   background: white;
+   margin: 0 auto;
+   font-family: Arial, Helvetica, sans-serif; 
+}
+
+ol, ul {
+   list-style: none;
+}
+
+/* page header */
+header {
+   background: #FFE373;
+   width: 100%;
+   color: black;
+   font-size: 48px;
+   text-align: center;
+   line-height: 1.5em;
+   border-bottom: 1px solid black;
+   border-left: 1px solid black;
+   border-right: 1px solid black;
+}
+
+/* main content */
+article {
+   width: 960px;
+   text-align: center;
+   background: #BFA230;
+   padding-bottom: 20px;
+   border-bottom: 1px solid black;
+   border-left: 1px solid black;
+   border-right: 1px solid black;
+}
+
+article h2 {
+   font-weight: bold;
+   font-size: 24px;
+   padding: 10px;
+}
+
+/* form */
+
+fieldset {
+  padding: 1em;
+  background: white;
+  text-align: right;
+}
+
+form {
+  background: white;
+  padding: 10px 5px 7px 5px;
+  margin: 0 auto;
+  width: 30em;
+  border: 2px solid black;
+}
+
+input {
+  font-size: 1em;
+  float: left;
+}
+
+input:focus {
+  background: #e3d5ba;
+}
+
+label {
+  display: block;
+  margin: 0.5em 1em 0 0;
+  float: left;
+  clear: left;
+  width: 10em;
+}
+
+#submitsection {
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+#submit {
+   float: none;
+}

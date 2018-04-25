@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 6
+      Hands-on Project 6-1
+
+      Author: Lisa Kilker
+      Date:   April 19, 2018
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hands-on Project 6-1</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.65897.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 6-1
+      </h1>
+   </header>
+
+   <article>
+      <h2>Personal Information</h2>
+      <form action="results.htm">
+        <div id="errorText"></div> 
+        <div id="numErrorText"></div>
+        <fieldset id="contactinfo">
+          <label for="addrinput">
+            Street Address
+          </label>
+          <input type="text" id="addrinput" name="Address" required="required" placeholder="number and street name" />
+          <label for="cityinput">
+            City
+          </label>
+          <input type="text" id="cityinput" name="City" required="required" />
+          <label for="stateinput">
+            State/Province
+          </label>
+          <input type="text" id="stateinput" name="State" maxlength="2" required="required" />
+          <label for="zipinput">
+            Zip/Postal Code
+          </label>
+          <input type="number" id="zipinput" name="Zip" maxlength="5" required="required" />
+          <label for="ssn1">
+            Social Security Number
+          </label>
+          <input type="number" id="ssn1" name="SSN1" class="ssn" maxlength="3" required="required" />
+          <label for="ssn2" id="ssn2label">
+            Social Security Number (continued)
+          </label>
+          <input type="number" id="ssn2" name="SSN2" class="ssn" maxlength="2" required="required" />
+          <label for="ssn3" id="ssn3label">
+            Social Security Number (end)
+          </label>
+          <input type="number" id="ssn3" name="SSN3" class="ssn" maxlength="4" required="required" />
+        </fieldset>
+        <fieldset id="submitsection">
+          <input type="submit" id="submitBtn" value="Submit" />
+        </fieldset>
+     </form>
+
+   </article>
+   <script>
+    <script src="script.js">
+    <form action="results.htm" novalidate="novalidate">
+   </script>
+</body>
+</html>

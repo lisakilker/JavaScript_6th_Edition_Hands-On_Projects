@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 5
+      Hands-on Project 5-2
+
+      Author: Lisa Kilker
+      Date:   April 21, 2018
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hands-on Project 5-2</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 5-2
+      </h1>
+   </header>
+
+   <article>
+      <h2>Change of address form</h2>
+      <form>
+        <fieldset id="contactinfo">
+          <label for="addrinput">
+            Street Address
+          </label>
+          <input type="text" id="addrinput" name="Address" />
+          <label for="cityinput">
+            City
+          </label>
+          <input type="text" id="cityinput" name="City" />
+          <label for="stateinput">
+            State/Province
+          </label>
+          <input type="text" id="stateinput" name="State" />
+          <label for="zipinput">
+            Zip/Postal Code
+          </label>
+          <input type="number" id="zipinput" name="Zip" />
+        </fieldset>
+        <fieldset id="submitsection">
+          <input type="button" id="submit" value="Submit" />
+        </fieldset>
+     </form>
+
+   </article>
+   <script>
+     function processInput() {
+      var propertyWidth = 300;
+      var propertyHeight = 100;
+      var winLeft = ((screen.width - propertyWidth) / 2);
+      var winTop = ((screen.height - propertyHeight) / 2);
+      var winOptions = "width=300,height=100";
+      winOptions += ",left=" + winLeft;
+      winOptions += ",top=" + winTop;
+      window.open("confirm.htm", "confirm", winOptions);
+     }
+
+     function createEventListener() {
+      var submitButton = document.getElementById("submit");
+        if (submitButton.addEventListener) {
+          submitButton.addEventListener("click", processInput, false);
+        }
+        else if (submitButton.attachEvent) {
+          submitButton.attachEvent("onclick", processInput);
+        }
+     }
+
+     if (window.addEventListener) {
+        window.addEventListener("load", createEventListener, false);
+      }
+      else if (window.attachEvent) {
+        window.attachEvent("onload", createEventListener);
+      }
+   </script>
+</body>
+</html>
+
+
+
+
+
+
