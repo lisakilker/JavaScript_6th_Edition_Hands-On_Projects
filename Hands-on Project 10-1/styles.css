@@ -1,0 +1,199 @@
+/*  JavaScript 6th Edition
+    Chapter 10
+    Hands-on Project 10-1
+
+    Filename: styles.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   min-width: 320px;
+   max-width: 640px;
+   background: white;
+   margin: 0 auto;
+   font-family: Arial, Helvetica, sans-serif; 
+   -webkit-box-shadow: 10px 0px 10px rgba(50, 50, 50, 1),
+                       0px 10px 10px rgba(50, 50, 50, 1),
+                       -10px 0px 10px rgba(50, 50, 50, 1);
+   -moz-box-shadow:    10px 0px 10px rgba(50, 50, 50, 1),
+                       0px 10px 10px rgba(50, 50, 50, 1),
+                       -10px 0px 10px rgba(50, 50, 50, 1);
+   box-shadow:         10px 0px 10px rgba(50, 50, 50, 1),
+                       0px 10px 10px rgba(50, 50, 50, 1),
+                       -10px 0px 10px rgba(50, 50, 50, 1);
+}
+
+ol, ul {
+   list-style: none;
+}
+
+/* page header */
+header {
+   background: #04819E;
+   width: 100%;
+   color: #FFFFFF;
+   font-size: 48px;
+   text-align: center;
+   line-height: 1.5em;
+   border-bottom: 1px solid black;
+}
+
+/* main content */
+article {
+   width: 100%;
+   text-align: center;
+   background: ivory;
+   padding-bottom: 20px;
+   overflow: auto;
+}
+
+h2 {
+   font-weight: bold;
+   font-size: 24px;
+   padding: 10px;
+}
+
+#grid {
+   overflow: auto;
+   width: 266px;
+   margin: 0 auto;
+   border: 1px solid black;
+}
+
+#grid div {
+   float: left;
+   width: 88px;
+   height: 99px;
+   border: 1px solid black;
+}
+
+#top1, #bottom1 {
+   clear: left;
+}
+
+#image {
+   float: left;
+   margin-left: 50px;
+}
+
+#image img {
+   border: 10px solid darkgoldenrod;
+}
+
+#pieces {
+   position: relative;
+   height: 110px;
+}
+
+#pieces div {
+   position: absolute;
+   width: 14.6667%;
+   margin: 1%;
+   padding: 1em 0;
+   height: 110px;
+}
+
+#piece1 {
+   left: 0px;
+   background: url("images/frog_03.png") center center no-repeat;
+}
+
+#piece2 {
+   left: 16.6667%;
+   background: url("images/frog_02.png") center center no-repeat;
+}
+
+#piece3 {
+   left: 33.3334%;
+   background: url("images/frog_05.png") center center no-repeat;
+}
+
+#piece4 {
+   left: 50%;
+   background: url("images/frog_01.png") center center no-repeat;
+}
+
+#piece5 {
+   left: 66.6667%;
+   background: url("images/frog_06.png") center center no-repeat;
+}
+
+#piece6 {
+   left: 83.3334%;
+   background: url("images/frog_04.png") center center no-repeat;
+}
+
+@media all and (max-width: 550px) {
+   #grid {
+      margin: 0 auto;
+      width: 134px;
+   }
+   #grid div {
+      width: 44px;
+      height: 49px;
+   }
+   #image {
+      float: left;
+      width: 100%;
+      text-align: center;
+      margin: 0 0 20px;
+   }
+   #piece1 {
+      background: url("images/frog_03_sm.png") center center no-repeat;
+   }
+   
+   #piece2 {
+      background: url("images/frog_02_sm.png") center center no-repeat;
+   }
+   
+   #piece3 {
+      background: url("images/frog_05_sm.png") center center no-repeat;
+   }
+   
+   #piece4 {
+      background: url("images/frog_01_sm.png") center center no-repeat;
+   }
+   
+   #piece5 {
+      background: url("images/frog_06_sm.png") center center no-repeat;
+   }
+   
+   #piece6 {
+      background: url("images/frog_04_sm.png") center center no-repeat;
+   }
+}

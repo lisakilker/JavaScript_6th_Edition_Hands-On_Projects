@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 7
+      Hands-on Project 7-3
+
+     Author: Lisa Kilker
+      Date:   April 25, 2018 
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <title>Hands-on Project 7-3</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 7-3
+      </h1>
+   </header>
+
+   <article>
+      <h2>Lunch selections</h2>
+      <form>
+         <input type="checkbox" id="item1" value="799" />
+         <label for="item1">Fried chicken ($7.99)</label>
+         <input type="checkbox" id="item2" value="999" />
+         <label for="item2">Fried halibut ($9.99)</label>
+         <input type="checkbox" id="item3" value="799" />
+         <label for="item3">Hamburger ($7.99)</label>
+         <input type="checkbox" id="item4" value="1299" />
+         <label for="item4">Grilled salmon ($12.99)</label>
+         <input type="checkbox" id="item5" value="599" />
+         <label for="item5">Side salad ($5.99)</label>
+         <input type="button" value="Calculate" id="sButton" />
+      </form>
+      <table>
+         <colgroup>
+            <col class="label" />
+            <col class="amount" />
+         </colgroup>
+         <tbody>
+            <tr>
+               <td>Item total</td>
+               <td>0.00</td>
+            </tr>
+            <tr>
+               <td>Tax</td>
+               <td>0.00</td>
+            </tr>
+            <tr>
+               <td>Total with tax</td>
+               <td>$0.00</td>
+            </tr>
+         </tbody>
+      </table>
+      </article>
+      <script>
+      function calcTotal() {
+            var itemTotal = 0;
+            var tax = 0;
+            var totalWithTax = 0;
+            var items = document.getElementsByTagName("input");
+            var cells = document.getElementsByTagName("td");
+
+               for(var i = 0; i < 5; i++) {
+                  if (items[i].checked) {
+                     itemTotal += (items[i].value * 1); //loops through all the check boxes in the form.  For each box that is checked, the loops adds its value to the itemTotal variable.
+                  }
+               }
+                     tax = itemTotal * 0.05;
+                     totalWithTax = itemTotal + tax;
+                     cells[1].innerHTML = (itemTotal/100).toFixed(2);
+                     cells[3].innerHTML = (tax/100).toFixed(2);
+                     cells[5].innerHTML = "$" + (totalWithTax/100).toFixed(2);
+      }
+
+            var submitButton = document.getElementById("sButton");
+               
+               if(submitButton.addEventListener) {
+                  submitButton.addEventListener("click", calcTotal, false);
+
+               } else if (submitButton.attachEvent) {
+                  submitButton.attachEvent("onclick", calcTotal);
+               }
+
+
+      </script>
+   </body>
+</html>

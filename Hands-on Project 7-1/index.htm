@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 7
+      Hands-on Project 7-1
+
+      Author: Lisa Kilker
+      Date:  April 25, 2018 
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <title>Hands-on Project 7-1</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 7-1
+      </h1>
+   </header>
+
+   <article>
+      <h2>Square Root Calculator</h2>
+      <form>
+          <fieldset>
+            <label for="mValue">
+              Enter a number
+            </label>
+            <input type="number" id="value" />
+          </fieldset>
+          <fieldset>
+            <button type="button" id="convertButton">Calculate square root</button>
+          </fieldset>
+          <fieldset>
+             <p>Square root</p>
+            <p id="sqRoot"></p>
+          </fieldset>
+     </form>
+   </article>
+    <script>
+      var valueElement = document.getElementById("value");
+      var resultElement = document.getElementById("sqRoot");
+
+      function convert(){
+        var root = Math.sqrt(valueElement.value);
+
+          resultElement.innerHTML = root.toFixed(2);
+      }
+
+      function createEventListener() {
+        var submitButton = document.getElementById("convertButton");
+
+          if (submitButton.addEventListener) {
+              submitButton.addEventListener("click", convert, false);
+
+          } else if (submitButton.attachEvent) {
+              submitButton.attachEvent("onclick", convert);
+          }
+              document.getElementById('value').value = ""; //clears last starting value
+              document.getElementById('sqRoot').innerHTML = ""; //clears previous results
+          }
+
+          if (window.addEventListener) {
+              window.addEventListener("load", createEventListener, false);
+
+          } else if (window.attachEvent) {
+              window.attachEvent("onload", createEventListener);
+      }
+
+   </script>
+  </body>
+</html>

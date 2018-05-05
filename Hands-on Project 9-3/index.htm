@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 9
+      Hands-on Project 9-3
+
+      Author: Lisa Kilker
+      Date:   May 2, 2018
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta id="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
+   <title>Hands-on Project 9-2</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.65897.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 9-2
+      </h1>
+   </header>
+
+   <article>
+      <div id="errorMessage"></div>
+      <form action="results.htm">
+         <fieldset id="deliveryinfo">
+            <legend>Site Login</legend>
+            <label for="usernameinput">Username</label>
+            <input type="text" id="usernameinput" name="username" />
+            <label for="passwordinput">Password</label>
+            <input type="password" id="passwordinput" name="password" />
+            <input type="checkbox" id="rememberinput" name="remember" value="remember" />
+            <label for="rememberinput" id="rememberlabel">Remember me</label>
+         </fieldset>
+         <fieldset id="submitbutton">
+            <input type="submit" id="submitBtn" value="Login" />
+         </fieldset>
+      </form>
+   </article>
+   <script src="script.js"></script>
+</body>
+</html>
