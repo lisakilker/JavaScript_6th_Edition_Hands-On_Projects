@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 12
+      Hands-on Project 12-2
+
+      Author: Lisa Kilker
+      Date:   May 9, 2018
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Hands-on Project 12-2</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 12-2
+      </h1>
+   </header>
+
+   <article>
+      <h2>Pounds (lb) to Kilograms (Kg) converter</h2>
+      <form>
+          <fieldset>
+             <label for="pValue">
+                Enter weight in pounds
+             </label>
+             <input type="number" id="pValue" />
+          </fieldset>
+          <fieldset>
+             <button type="button" id="convertButton">Convert to Kg</button>
+          </fieldset>
+          <fieldset>
+             <p>Weight in kilograms</p>
+             <p id="kValue"></p>
+          </fieldset>
+     </form>
+   </article>
+   <script src="jquery-1.11.1.min.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>
